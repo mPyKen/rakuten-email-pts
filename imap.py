@@ -171,7 +171,10 @@ class MyEmail:
 
     def __repr__(self):
         r = ''
-        r += 'Subject: {}\n'.format(self.subject)
+        if '様' in self.subject:
+            r += 'Subject: {}\n'.format('<hidden for privacy>')
+        else:
+            r += 'Subject: {}\n'.format(self.subject)
         r += '   From: {} {}\n'.format(self.fr, self.sender)
         r += '   Date: {}'.format(self.local_date.strftime("%Y-%m-%d %H:%M"))
         return r
