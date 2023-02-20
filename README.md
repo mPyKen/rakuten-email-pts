@@ -1,3 +1,4 @@
+![example workflow](https://github.com/mPyKen/rakuten-email-pts/actions/workflows/main.yml/badge.svg)
 # 楽天クリックでポイント自動化ツール
 ## Setup
 Go to https://emagazine.rakuten.co.jp and subscribe for emails from:
