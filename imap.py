@@ -263,7 +263,7 @@ class MyChrome:
         # Chrome立ち上げ
         options = Options()
         if headless:
-            options.add_argument('--headless')
+            options.add_argument('--headless=new')
             #options.add_argument("--no-sandbox")
             #options.add_argument('--lang=en_US')
             #options.add_argument('--window-size=1920x1080');
