@@ -24,7 +24,9 @@ jobs:
       with:
         path: |
           cache
-        key: folder-key
+        key: ignore
+        restore-keys: |
+          folder-key-
     - name: run main
       run: |
         bash main.sh
@@ -36,4 +38,4 @@ jobs:
       with:
         path: |
           cache
-        key: ${{ steps.cache-folder-restore.outputs.cache-primary-key }}
+        key: folder-key-${{ github.run_id }}
