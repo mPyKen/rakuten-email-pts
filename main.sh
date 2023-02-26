@@ -18,7 +18,7 @@ echo "$CONFIGURATION" | tr ',' '\n' | \
 while read -r config; do
     source <(base64 -dw0 <<< "$config")
     profile="`base64 -w0 <<< "$EMAIL_ADDRESS"`"
-	python imap.py \
+    python imap.py \
         "$cache/$profile" \
         "$IMAP_SERVER" \
         "$IMAP_FOLDER" \
