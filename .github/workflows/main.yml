@@ -28,8 +28,12 @@ jobs:
         restore-keys: |
           folder-key-
     - name: run main
-      run: |
-        bash main.sh
+      uses: nick-fields/retry@v2
+      with:
+        timeout_minutes: 60
+        max_attempts: 3
+        retry_on: error
+        command: bash main.sh
       env:
         CONFIGURATION: ${{ secrets.CONFIGURATION }}
     - name: Save folder
