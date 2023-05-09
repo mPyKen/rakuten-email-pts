@@ -43,3 +43,4 @@ jobs:
         path: |
           cache
         key: folder-key-${{ github.run_id }}
+    - uses: gautamkrishnar/keepalive-workflow@v1
