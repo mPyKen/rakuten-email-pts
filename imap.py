@@ -345,7 +345,7 @@ def run(server, user, pw, folder, profile, rakutenPw, markS):
                     time.sleep(2)
                     try:
                         uname = chrome.chrome.find_element_by_id("user_id")
-                        unext = chrome.chrome.find_element_by_id("cta")
+                        unext = chrome.chrome.find_element_by_id("cta001")
                     except NoSuchElementException:
                         print('could not find element user_id or cta')
                         return 1
@@ -354,8 +354,8 @@ def run(server, user, pw, folder, profile, rakutenPw, markS):
                     time.sleep(2)
                     try:
                         upass = chrome.chrome.find_element_by_id("password_current")
-                        #ulogin = chrome.chrome.find_element_by_id("cta")
-                        ulogin = chrome.chrome.find_elements_by_xpath("//div[@id=\"cta\"]")[1]
+                        ulogin = chrome.chrome.find_element_by_id("cta011")
+                        #ulogin = chrome.chrome.find_elements_by_xpath("//div[@id=\"cta\"]")[1]
                     except NoSuchElementException:
                         print('could not find element user_id or cta2')
                         return 1
